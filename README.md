@@ -26,3 +26,15 @@ git clone https://github.com/gilalmogy/cursor-global-rules.git
 ## User Rules (global text)
 
 For preferences that apply everywhere without importing a repo, open **Cursor Settings** → **Rules** → **User Rules** and paste the same workflow bullets, or keep them only in this repo and use **Remote rule** as above.
+
+A copy also exists on disk at `%USERPROFILE%\.cursor\rules\git-milestone-backup.mdc` for reference; Cursor may still require **User Rules** or **Remote rule** in Settings for guaranteed global application.
+
+## Publishing this repo (first time)
+
+Requires GitHub authentication. Either run `gh auth login`, or set `GH_TOKEN` and run:
+
+```powershell
+gh repo create cursor-global-rules --public --source . --remote origin --push
+```
+
+If the repo already exists, add `origin` and `git push -u origin main`.
