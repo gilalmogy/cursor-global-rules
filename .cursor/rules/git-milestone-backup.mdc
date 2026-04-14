@@ -1,0 +1,16 @@
+---
+description: On milestones, commit and push so GitHub is the backup. Single-commit repos preferred after cleanup.
+alwaysApply: true
+---
+
+# Git milestone backup (all projects)
+
+When work reaches a **significant milestone** (feature slice, release candidate, or meaningful session end):
+
+1. **Commit** with a clear imperative subject; add a short body if needed.
+2. **Confirm `origin`** points at the intended GitHub repository. If missing, create the repo or ask which remote to use.
+3. **Push** the default branch (`main` or `master`). Use `git push --force-with-lease` only when rewriting history was explicitly requested for that repo.
+4. If **behind `origin`**, merge or rebase before pushing so you do not drop remote-only commits unless the user chose to overwrite.
+5. For repos maintained as **single-commit** history, replace history only when the user asked for that cleanup in this session.
+
+Goal: **GitHub holds the latest milestone** for every active project.
