@@ -6,7 +6,7 @@ This repository holds **Cursor project rules** you can reuse on every machine an
 
 1. Open **Cursor Settings** → **Rules, Commands**.
 2. Under **Project Rules**, click **+ Add Rule** → **Remote rule (GitHub)**.
-3. Paste this repository URL (after you push it to GitHub):
+3. Paste this repository URL:
 
    `https://github.com/gilalmogy/cursor-global-rules`
 
